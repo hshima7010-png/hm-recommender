@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マイページ - H&M Recommender</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div class="header-inner">
+      <a href="index.html" class="logo">H&amp;M</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="index.html#popular" class="nav-link">人気</a>
+        <a href="mypage.html" class="nav-link active">マイページ</a>
+      </nav>
+      <div class="header-right">
+        <select id="user-selector" class="user-selector" title="デモ用ユーザー切替">
+          <option value="">ゲスト</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="segment-tabs">
+    <div class="segment-tabs-inner">
+      <a href="#" class="segment-tab" data-segment="all">ALL</a>
+      <a href="#" class="segment-tab" data-segment="ladies">LADIES</a>
+      <a href="#" class="segment-tab" data-segment="men">MEN</a>
+      <a href="#" class="segment-tab" data-segment="kids">KIDS</a>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="section">
+    <div class="mypage-header">
+      <h1 id="user-greeting">ゲストとしてログイン中</h1>
+      <p id="user-id-display" class="user-id-text"></p>
+    </div>
+
+    <div class="info-card" id="login-prompt">
+      <h3>📌 デモの使い方</h3>
+      <p>右上のセレクタから既存ユーザーを選択すると、そのユーザーの購買履歴に基づくレコメンドを確認できます。</p>
+      <p>上部の「LADIES / MEN / KIDS」タブで、各カテゴリ専用のレコメンドが表示されます。</p>
+    </div>
+  </section>
+
+  <section id="for-you" class="section hidden">
+    <div class="section-head">
+      <h2 class="section-title">あなたへのおすすめ</h2>
+      <span class="section-tag" id="for-you-source">協調フィルタリング</span>
+    </div>
+    <p class="section-desc">あなたと似た購買パターンを持つお客様が購入したアイテム</p>
+    <div class="product-grid" id="for-you-grid"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>H&M Recommender Demo</p>
+  </div>
+</footer>
+
+<script src="js/recommender.js"></script>
+<script src="js/mypage.js"></script>
+</body>
+</html>

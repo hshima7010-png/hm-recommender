@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H&M Recommender Demo</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="header">
+  <div class="header-top">
+    <div class="header-inner">
+      <a href="index.html" class="logo">H&amp;M</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="#popular" class="nav-link">人気</a>
+        <a href="mypage.html" class="nav-link">マイページ</a>
+      </nav>
+      <div class="header-right">
+        <input type="search" id="search-input" placeholder="商品を検索…" class="search-input">
+        <select id="user-selector" class="user-selector" title="デモ用ユーザー切替">
+          <option value="">ゲスト</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- セグメントタブ（性別カテゴリ） -->
+  <div class="segment-tabs">
+    <div class="segment-tabs-inner">
+      <a href="#" class="segment-tab" data-segment="all">ALL</a>
+      <a href="#" class="segment-tab" data-segment="ladies">LADIES</a>
+      <a href="#" class="segment-tab" data-segment="men">MEN</a>
+      <a href="#" class="segment-tab" data-segment="kids">KIDS</a>
+    </div>
+  </div>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">あなただけの<br>ファッション体験を</h1>
+    <p class="hero-sub">購買履歴と機械学習で、ぴったりのアイテムをご提案</p>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- あなたへのおすすめ -->
+  <section id="for-you" class="section hidden">
+    <div class="section-head">
+      <h2 class="section-title">あなたへのおすすめ</h2>
+      <span class="section-tag" id="for-you-source">協調フィルタリング</span>
+    </div>
+    <p class="section-desc" id="for-you-desc">あなたの購買履歴をもとに、似たお客様に人気のアイテムをお届けします</p>
+    <div class="product-grid" id="for-you-grid"></div>
+  </section>
+
+  <!-- 検索結果 -->
+  <section id="search-section" class="section hidden">
+    <div class="section-head">
+      <h2 class="section-title">検索結果: <span id="search-query"></span></h2>
+    </div>
+    <div class="product-grid" id="search-grid"></div>
+  </section>
+
+  <!-- 人気商品 -->
+  <section id="popular" class="section">
+    <div class="section-head">
+      <h2 class="section-title" id="popular-title">今週の人気アイテム</h2>
+      <span class="section-tag">直近2週間</span>
+    </div>
+    <p class="section-desc">他のお客様によく買われている話題のアイテム</p>
+    <div class="tabs">
+      <button class="tab-btn active" data-age="overall">全体</button>
+      <button class="tab-btn" data-age="young">16-25歳</button>
+      <button class="tab-btn" data-age="middle">26-40歳</button>
+      <button class="tab-btn" data-age="senior">41歳〜</button>
+    </div>
+    <div class="product-grid" id="popular-grid"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>H&M Recommender Demo · Powered by Python &amp; ML</p>
+    <p class="footer-sub">3種類のレコメンドエンジン: 人気度 / 協調フィルタリング / コンテンツベース</p>
+  </div>
+</footer>
+
+<script src="js/recommender.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

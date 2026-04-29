@@ -1,0 +1,33 @@
+# ======== H&M Kaggleデータ（ライセンス上公開不可・サイズ大）========
+data/
+
+# ======== 事前計算結果 ========
+output/
+
+# ======== Python ========
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+
+# ======== Jupyter ========
+.ipynb_checkpoints/
+
+# ======== IDE ========
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ======== OS ========
+.DS_Store
+Thumbs.db
+
+# ======== その他 ========
+*.log
+.env

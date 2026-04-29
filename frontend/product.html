@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商品詳細 - H&M Recommender</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div class="header-inner">
+      <a href="index.html" class="logo">H&amp;M</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="index.html#popular" class="nav-link">人気</a>
+        <a href="mypage.html" class="nav-link">マイページ</a>
+      </nav>
+      <div class="header-right">
+        <input type="search" id="search-input" placeholder="商品を検索…" class="search-input">
+        <select id="user-selector" class="user-selector" title="デモ用ユーザー切替">
+          <option value="">ゲスト</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="segment-tabs">
+    <div class="segment-tabs-inner">
+      <a href="index.html?segment=all" class="segment-tab" data-segment="all">ALL</a>
+      <a href="index.html?segment=ladies" class="segment-tab" data-segment="ladies">LADIES</a>
+      <a href="index.html?segment=men" class="segment-tab" data-segment="men">MEN</a>
+      <a href="index.html?segment=kids" class="segment-tab" data-segment="kids">KIDS</a>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <div id="product-detail" class="product-detail">
+    <div class="loading">読み込み中…</div>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">この商品に似たアイテム</h2>
+      <span class="section-tag">コンテンツベース</span>
+    </div>
+    <p class="section-desc">商品の属性（カテゴリ・色・スタイル）から類似アイテムを抽出</p>
+    <div class="product-grid" id="related-grid"></div>
+  </section>
+
+  <section class="section hidden" id="cf-related">
+    <div class="section-head">
+      <h2 class="section-title">この商品を見た人におすすめ</h2>
+      <span class="section-tag">協調フィルタリング</span>
+    </div>
+    <div class="product-grid" id="for-you-grid"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>H&M Recommender Demo · Powered by Python &amp; ML</p>
+  </div>
+</footer>
+
+<script src="js/recommender.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>
