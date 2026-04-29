@@ -1,5 +1,7 @@
 # H&M Personalized Recommender EC
 
+![Top Page](screenshots/top.png)
+
 KaggleのH&M Personalized Fashion Recommendationsデータセットを活用した、レコメンド特化型ECサイトのデモプロジェクト。
 
 3種類の異なるレコメンドアルゴリズムを実装し、性別セグメント別に独立して学習・配信する構成。
